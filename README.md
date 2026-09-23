@@ -49,9 +49,7 @@ spring.security.user.name=admin
 spring.security.user.password=monteVagas
 ```
 
-**Troque a senha antes de deixar a aplicação acessível para outras pessoas**
-— edite o valor de `spring.security.user.password` nesse arquivo. O
-navegador vai pedir usuário e senha na primeira vez que você acessar o
+ O navegador vai pedir usuário e senha na primeira vez que você acessar o
 painel; depois disso, ele lembra até você fechar o navegador.
 
 ## Estrutura do projeto
