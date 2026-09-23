@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editar vaga | Portal de Vagas de Monte Santo</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="cabecalho">
+  <div class="barra-topo">
+    <a class="marca" href="index.html">
+      <svg class="icone-sol" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="20" r="9" fill="#F2A93B"/>
+        <path d="M6 40 L18 24 L26 32 L32 22 L42 40 Z" fill="#B5502F"/>
+      </svg>
+      <span>Portal de Vagas<br><small>Monte Santo / BA</small></span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Buscar vagas</a>
+      <a href="painel.html">Painel administrativo</a>
+    </nav>
+  </div>
+  <div class="hero" style="padding-bottom: 70px;">
+    <h1 style="font-size: 2rem;">Editar vaga</h1>
+    <p class="subtitulo">Atualize os dados da vaga abaixo.</p>
+  </div>
+</header>
+
+<main>
+  <div class="cartao-formulario">
+    <div id="alerta-sucesso" class="alerta sucesso">Vaga atualizada com sucesso!</div>
+    <div id="alerta-erro" class="alerta erro">Não foi possível salvar as alterações. Confira os campos e tente novamente.</div>
+
+    <form id="form-editar-vaga" novalidate>
+      <div class="grupo-campo">
+        <label for="titulo">Título da vaga *</label>
+        <input type="text" id="titulo" name="titulo" required>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="empresa">Empresa, associação ou nome do contratante *</label>
+        <input type="text" id="empresa" name="empresa" required>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="descricao">Descrição da vaga *</label>
+        <textarea id="descricao" name="descricao" rows="4" required></textarea>
+      </div>
+
+      <div class="linha-campos">
+        <div class="grupo-campo">
+          <label for="categoria">Categoria *</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecione</option>
+            <option>Construção Civil</option>
+            <option>Serviços Gerais</option>
+            <option>Comércio</option>
+            <option>Agricultura</option>
+            <option>Artesanato e Costura</option>
+            <option>Educação</option>
+            <option>Saúde e Cuidados</option>
+            <option>Transporte</option>
+            <option>Outros</option>
+          </select>
+        </div>
+        <div class="grupo-campo">
+          <label for="tipoContrato">Tipo de contrato *</label>
+          <select id="tipoContrato" name="tipoContrato" required>
+            <option value="">Selecione</option>
+            <option>CLT</option>
+            <option>Temporário</option>
+            <option>Diarista</option>
+            <option>Autônomo</option>
+            <option>Meio período</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="linha-campos">
+        <div class="grupo-campo">
+          <label for="localizacao">Localização (bairro/zona) *</label>
+          <input type="text" id="localizacao" name="localizacao" required>
+        </div>
+        <div class="grupo-campo">
+          <label for="salario">Remuneração</label>
+          <input type="text" id="salario" name="salario">
+        </div>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="contato">Telefone ou WhatsApp para contato *</label>
+        <input type="text" id="contato" name="contato" required>
+      </div>
+
+      <div class="grupo-campo">
+        <label style="display:flex; align-items:center; gap:8px; font-weight:600;">
+          <input type="checkbox" id="ativa" name="ativa" style="width:auto;">
+          Vaga ativa (visível no portal)
+        </label>
+      </div>
+
+      <div style="display:flex; gap:12px;">
+        <button type="submit" class="botao botao-primario" style="flex:1;">Salvar alterações</button>
+        <a href="painel.html" class="botao botao-secundario" style="flex:1; text-align:center;">Cancelar</a>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>Portal de Vagas de Monte Santo — <a href="painel.html" style="color: var(--sol); text-decoration: underline;">voltar ao painel</a></p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/editar-vaga.js"></script>
+</body>
+</html>

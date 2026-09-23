@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal de Vagas de Monte Santo | Oportunidades locais</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="cabecalho">
+  <div class="barra-topo">
+    <a class="marca" href="index.html">
+      <svg class="icone-sol" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="20" r="9" fill="#F2A93B"/>
+        <path d="M6 40 L18 24 L26 32 L32 22 L42 40 Z" fill="#B5502F"/>
+      </svg>
+      <span>Portal de Vagas<br><small>Monte Santo / BA</small></span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Buscar vagas</a>
+      <a href="publicar-vaga.html">Publicar vaga</a>
+      <a href="cadastro-curriculo.html" class="destaque">Cadastrar currículo</a>
+      <a href="painel.html">Painel</a>
+    </nav>
+  </div>
+
+  <div class="hero">
+    <span class="selo">Rede de associações de moradores e centros comunitários</span>
+    <h1>Oportunidades de trabalho perto de você</h1>
+    <p class="subtitulo">Um só lugar para encontrar vagas publicadas por comércios, associações e moradores de Monte Santo — sem complicação, sem taxas.</p>
+  </div>
+</header>
+
+<main>
+  <section class="painel-busca" aria-label="Buscar vagas">
+    <div class="campo">
+      <label for="campo-busca">Buscar por palavra-chave</label>
+      <input type="text" id="campo-busca" placeholder="Ex.: pedreiro, vendas, diarista...">
+    </div>
+    <div class="campo">
+      <label for="campo-categoria">Categoria</label>
+      <select id="campo-categoria">
+        <option value="">Todas</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="campo-localizacao">Localização</label>
+      <input type="text" id="campo-localizacao" placeholder="Ex.: Centro, Alto Bonito...">
+    </div>
+    <div class="campo" style="align-self: end;">
+      <button class="botao botao-primario botao-largo" id="botao-buscar" type="button">Buscar</button>
+    </div>
+  </section>
+
+  <h2 class="secao-titulo">Vagas disponíveis</h2>
+  <p class="secao-descricao">Toque em uma vaga para ver os detalhes e como entrar em contato.</p>
+
+  <p id="contador-resultados" aria-live="polite"></p>
+
+  <div id="lista-vagas" class="grade-vagas" aria-live="polite">
+    <p class="mensagem-vazia">Carregando vagas...</p>
+  </div>
+</main>
+
+<footer>
+  <p>Portal de Vagas de Monte Santo — conectando comércios, associações e moradores a oportunidades de trabalho locais.</p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/vagas.js"></script>
+</body>
+</html>

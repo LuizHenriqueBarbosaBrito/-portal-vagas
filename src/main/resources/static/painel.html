@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel administrativo | Portal de Vagas de Monte Santo</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .tabela-vagas { width: 100%; border-collapse: collapse; background: var(--branco); border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra); }
+  .tabela-vagas th, .tabela-vagas td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--borda); font-size: 0.92rem; }
+  .tabela-vagas th { background: var(--areia-forte); color: var(--texto-suave); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  .tabela-vagas tr:last-child td { border-bottom: none; }
+  .badge { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; }
+  .badge.ativa { background: rgba(76,122,94,0.14); color: var(--verde-caatinga); }
+  .badge.inativa { background: rgba(181,80,47,0.12); color: var(--terracota-escuro); }
+  .acoes-linha { display: flex; gap: 8px; flex-wrap: wrap; }
+  .botao-pequeno { padding: 8px 14px; font-size: 0.85rem; }
+  .tabela-wrapper { overflow-x: auto; }
+</style>
+</head>
+<body>
+
+<header class="cabecalho">
+  <div class="barra-topo">
+    <a class="marca" href="index.html">
+      <svg class="icone-sol" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="20" r="9" fill="#F2A93B"/>
+        <path d="M6 40 L18 24 L26 32 L32 22 L42 40 Z" fill="#B5502F"/>
+      </svg>
+      <span>Portal de Vagas<br><small>Monte Santo / BA</small></span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Buscar vagas</a>
+      <a href="publicar-vaga.html">Publicar vaga</a>
+      <a href="cadastro-curriculo.html">Cadastrar currículo</a>
+      <a href="painel.html" class="destaque">Painel</a>
+    </nav>
+  </div>
+  <div class="hero" style="padding-bottom: 60px;">
+    <h1 style="font-size: 2rem;">Painel administrativo</h1>
+    <p class="subtitulo">Acompanhe, edite e ative ou desative as vagas publicadas no portal.</p>
+  </div>
+</header>
+
+<main>
+  <p id="contador-painel" class="secao-descricao" aria-live="polite"></p>
+
+  <div class="tabela-wrapper">
+    <table class="tabela-vagas">
+      <thead>
+        <tr>
+          <th>Vaga</th>
+          <th>Empresa</th>
+          <th>Local</th>
+          <th>Status</th>
+          <th>Publicada em</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="corpo-tabela">
+        <tr><td colspan="6">Carregando vagas...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<footer>
+  <p>Portal de Vagas de Monte Santo — <a href="index.html" style="color: var(--sol); text-decoration: underline;">voltar para o site</a></p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/painel.js"></script>
+</body>
+</html>

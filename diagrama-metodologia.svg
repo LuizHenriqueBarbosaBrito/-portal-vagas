@@ -1,0 +1,113 @@
+<svg viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2B2118"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="560" fill="#FBF3E6"/>
+
+  <!-- Titulo -->
+  <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#17435E">Metodologia de desenvolvimento do projeto</text>
+
+  <!-- Legenda -->
+  <g font-size="12" fill="#2B2118">
+    <rect x="40" y="52" width="14" height="14" fill="#235C7F"/>
+    <text x="60" y="63">Backend</text>
+    <rect x="150" y="52" width="14" height="14" fill="#B5502F"/>
+    <text x="170" y="63">Frontend</text>
+    <rect x="270" y="52" width="14" height="14" fill="#4C7A5E"/>
+    <text x="290" y="63">Validação com a comunidade</text>
+    <rect x="480" y="52" width="14" height="14" fill="#D6901F"/>
+    <text x="500" y="63">Integração</text>
+  </g>
+
+  <!-- Inicio -->
+  <circle cx="45" cy="290" r="30" fill="#17435E"/>
+  <text x="45" y="284" text-anchor="middle" font-size="10" fill="#FFFFFF">Início do</text>
+  <text x="45" y="297" text-anchor="middle" font-size="10" fill="#FFFFFF">projeto</text>
+
+  <!-- Atividade A -->
+  <rect x="110" y="255" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#17435E" stroke-width="2"/>
+  <text x="185" y="277" text-anchor="middle" font-size="11" font-weight="bold" fill="#17435E">A</text>
+  <text x="185" y="293" text-anchor="middle" font-size="10" fill="#2B2118">Levantamento de</text>
+  <text x="185" y="305" text-anchor="middle" font-size="10" fill="#2B2118">requisitos</text>
+  <text x="185" y="318" text-anchor="middle" font-size="9" fill="#5A4E40">Duração: 3 dias</text>
+
+  <!-- linha Inicio -> A -->
+  <line x1="75" y1="290" x2="108" y2="290" stroke="#2B2118" stroke-width="1.5" marker-end="url(#seta)"/>
+
+  <!-- Atividade B (backend - modelagem) -->
+  <rect x="300" y="90" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#235C7F" stroke-width="2"/>
+  <text x="375" y="112" text-anchor="middle" font-size="11" font-weight="bold" fill="#235C7F">B</text>
+  <text x="375" y="128" text-anchor="middle" font-size="10" fill="#2B2118">Modelagem do</text>
+  <text x="375" y="140" text-anchor="middle" font-size="10" fill="#2B2118">banco de dados</text>
+  <text x="375" y="153" text-anchor="middle" font-size="9" fill="#5A4E40">Duração: 2 dias</text>
+
+  <!-- Atividade C (frontend - protótipo) -->
+  <rect x="300" y="255" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#B5502F" stroke-width="2"/>
+  <text x="375" y="277" text-anchor="middle" font-size="11" font-weight="bold" fill="#B5502F">C</text>
+  <text x="375" y="293" text-anchor="middle" font-size="10" fill="#2B2118">Design da interface</text>
+  <text x="375" y="305" text-anchor="middle" font-size="10" fill="#2B2118">(protótipo)</text>
+  <text x="375" y="318" text-anchor="middle" font-size="9" fill="#5A4E40">Duração: 2 dias</text>
+
+  <!-- Atividade D (validação comunidade) -->
+  <rect x="300" y="420" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#4C7A5E" stroke-width="2"/>
+  <text x="375" y="442" text-anchor="middle" font-size="11" font-weight="bold" fill="#4C7A5E">D</text>
+  <text x="375" y="458" text-anchor="middle" font-size="10" fill="#2B2118">Alinhamento com</text>
+  <text x="375" y="470" text-anchor="middle" font-size="10" fill="#2B2118">associações locais</text>
+  <text x="375" y="483" text-anchor="middle" font-size="9" fill="#5A4E40">Duração: 2 dias</text>
+
+  <!-- linhas A -> B,C,D -->
+  <path d="M260,270 C280,270 280,125 298,125" fill="none" stroke="#2B2118" stroke-width="1.5" marker-end="url(#seta)"/>
+  <line x1="260" y1="290" x2="298" y2="290" stroke="#2B2118" stroke-width="1.5" marker-end="url(#seta)"/>
+  <path d="M260,310 C280,310 280,455 298,455" fill="none" stroke="#2B2118" stroke-width="1.5" marker-end="url(#seta)"/>
+
+  <!-- Atividade E (backend - API) -->
+  <rect x="490" y="90" width="160" height="70" rx="8" fill="#FFFFFF" stroke="#235C7F" stroke-width="2"/>
+  <text x="570" y="112" text-anchor="middle" font-size="11" font-weight="bold" fill="#235C7F">E</text>
+  <text x="570" y="128" text-anchor="middle" font-size="10" fill="#2B2118">Desenvolvimento do</text>
+  <text x="570" y="140" text-anchor="middle" font-size="10" fill="#2B2118">backend (API REST)</text>
+  <text x="570" y="153" text-anchor="middle" font-size="9" fill="#5A4E40">Duração: 5 dias</text>
+
+  <!-- Atividade F (frontend - paginas) -->
+  <rect x="490" y="255" width="160" height="70" rx="8" fill="#FFFFFF" stroke="#B5502F" stroke-width="2"/>
+  <text x="570" y="277" text-anchor="middle" font-size="11" font-weight="bold" fill="#B5502F">F</text>
+  <text x="570" y="293" text-anchor="middle" font-size="10" fill="#2B2118">Desenvolvimento do</text>
+  <text x="570" y="305" text-anchor="middle" font-size="10" fill="#2B2118">frontend (HTML/CSS/JS)</text>
+  <text x="570" y="318" text-anchor="middle" font-size="9" fill="#5A4E40">Duração: 4 dias</text>
+
+  <!-- Atividade G (validação moradores) -->
+  <rect x="490" y="420" width="160" height="70" rx="8" fill="#FFFFFF" stroke="#4C7A5E" stroke-width="2"/>
+  <text x="570" y="442" text-anchor="middle" font-size="11" font-weight="bold" fill="#4C7A5E">G</text>
+  <text x="570" y="458" text-anchor="middle" font-size="10" fill="#2B2118">Coleta de sugestões</text>
+  <text x="570" y="470" text-anchor="middle" font-size="10" fill="#2B2118">com moradores</text>
+  <text x="570" y="483" text-anchor="middle" font-size="9" fill="#5A4E40">Duração: 2 dias</text>
+
+  <!-- linhas B->E, C->F, D->G -->
+  <line x1="450" y1="125" x2="488" y2="125" stroke="#2B2118" stroke-width="1.5" marker-end="url(#seta)"/>
+  <line x1="450" y1="290" x2="488" y2="290" stroke="#2B2118" stroke-width="1.5" marker-end="url(#seta)"/>
+  <line x1="450" y1="455" x2="488" y2="455" stroke="#2B2118" stroke-width="1.5" marker-end="url(#seta)"/>
+
+  <!-- Atividade H (integracao) -->
+  <rect x="710" y="255" width="160" height="70" rx="8" fill="#FFFFFF" stroke="#D6901F" stroke-width="2"/>
+  <text x="790" y="277" text-anchor="middle" font-size="11" font-weight="bold" fill="#D6901F">H</text>
+  <text x="790" y="293" text-anchor="middle" font-size="10" fill="#2B2118">Integração, testes e</text>
+  <text x="790" y="305" text-anchor="middle" font-size="10" fill="#2B2118">ajustes finais</text>
+  <text x="790" y="318" text-anchor="middle" font-size="9" fill="#5A4E40">Duração: 3 dias</text>
+
+  <!-- linhas E,F,G -> H -->
+  <path d="M650,125 C685,125 685,270 708,270" fill="none" stroke="#2B2118" stroke-width="1.5" marker-end="url(#seta)"/>
+  <line x1="650" y1="290" x2="708" y2="290" stroke="#2B2118" stroke-width="1.5" marker-end="url(#seta)"/>
+  <path d="M650,455 C685,455 685,310 708,310" fill="none" stroke="#2B2118" stroke-width="1.5" marker-end="url(#seta)"/>
+
+  <!-- Fim -->
+  <circle cx="945" cy="290" r="30" fill="#17435E"/>
+  <text x="945" y="284" text-anchor="middle" font-size="10" fill="#FFFFFF">Fim do</text>
+  <text x="945" y="297" text-anchor="middle" font-size="10" fill="#FFFFFF">projeto</text>
+
+  <line x1="870" y1="290" x2="913" y2="290" stroke="#2B2118" stroke-width="1.5" marker-end="url(#seta)"/>
+
+  <!-- Duracao total -->
+  <text x="500" y="535" text-anchor="middle" font-size="11" fill="#5A4E40">Duração total estimada do caminho crítico (A → B → E → H): 13 dias úteis</text>
+</svg>

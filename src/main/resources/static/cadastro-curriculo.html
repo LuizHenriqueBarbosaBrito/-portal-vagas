@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastrar currículo | Portal de Vagas de Monte Santo</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="cabecalho">
+  <div class="barra-topo">
+    <a class="marca" href="index.html">
+      <svg class="icone-sol" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="20" r="9" fill="#F2A93B"/>
+        <path d="M6 40 L18 24 L26 32 L32 22 L42 40 Z" fill="#B5502F"/>
+      </svg>
+      <span>Portal de Vagas<br><small>Monte Santo / BA</small></span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Buscar vagas</a>
+      <a href="publicar-vaga.html">Publicar vaga</a>
+      <a href="cadastro-curriculo.html" class="destaque">Cadastrar currículo</a>
+      <a href="painel.html">Painel</a>
+    </nav>
+  </div>
+  <div class="hero" style="padding-bottom: 70px;">
+    <h1 style="font-size: 2rem;">Cadastre seu currículo</h1>
+    <p class="subtitulo">Suas informações ficam disponíveis para associações e empresas locais entrarem em contato quando surgir uma vaga com o seu perfil.</p>
+  </div>
+</header>
+
+<main>
+  <div class="cartao-formulario">
+    <div id="alerta-sucesso" class="alerta sucesso">Currículo cadastrado com sucesso! Boa sorte na busca por uma oportunidade.</div>
+    <div id="alerta-erro" class="alerta erro">Não foi possível concluir o cadastro. Confira os campos e tente novamente.</div>
+
+    <form id="form-curriculo" novalidate>
+      <div class="grupo-campo">
+        <label for="nomeCompleto">Nome completo *</label>
+        <input type="text" id="nomeCompleto" name="nomeCompleto" required placeholder="Seu nome completo">
+      </div>
+
+      <div class="linha-campos">
+        <div class="grupo-campo">
+          <label for="telefone">Telefone ou WhatsApp *</label>
+          <input type="text" id="telefone" name="telefone" required placeholder="(75) 9 9999-0000">
+        </div>
+        <div class="grupo-campo">
+          <label for="email">E-mail (opcional)</label>
+          <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+        </div>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="areaInteresse">Área de interesse *</label>
+        <select id="areaInteresse" name="areaInteresse" required>
+          <option value="">Selecione</option>
+          <option>Construção Civil</option>
+          <option>Serviços Gerais</option>
+          <option>Comércio</option>
+          <option>Agricultura</option>
+          <option>Artesanato e Costura</option>
+          <option>Educação</option>
+          <option>Saúde e Cuidados</option>
+          <option>Transporte</option>
+          <option>Outros</option>
+        </select>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="escolaridade">Escolaridade</label>
+        <select id="escolaridade" name="escolaridade">
+          <option value="">Prefiro não informar</option>
+          <option>Ensino fundamental incompleto</option>
+          <option>Ensino fundamental completo</option>
+          <option>Ensino médio incompleto</option>
+          <option>Ensino médio completo</option>
+          <option>Ensino superior incompleto</option>
+          <option>Ensino superior completo</option>
+        </select>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="experiencia">Experiências e habilidades</label>
+        <textarea id="experiencia" name="experiencia" rows="4" placeholder="Conte um pouco sobre seus trabalhos anteriores e o que você sabe fazer"></textarea>
+      </div>
+
+      <button type="submit" class="botao botao-primario botao-largo">Cadastrar currículo</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>Portal de Vagas de Monte Santo — conectando comércios, associações e moradores a oportunidades de trabalho locais.</p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/curriculo.js"></script>
+</body>
+</html>

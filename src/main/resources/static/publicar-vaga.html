@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publicar vaga | Portal de Vagas de Monte Santo</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="cabecalho">
+  <div class="barra-topo">
+    <a class="marca" href="index.html">
+      <svg class="icone-sol" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="20" r="9" fill="#F2A93B"/>
+        <path d="M6 40 L18 24 L26 32 L32 22 L42 40 Z" fill="#B5502F"/>
+      </svg>
+      <span>Portal de Vagas<br><small>Monte Santo / BA</small></span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Buscar vagas</a>
+      <a href="publicar-vaga.html" class="destaque">Publicar vaga</a>
+      <a href="cadastro-curriculo.html">Cadastrar currículo</a>
+      <a href="painel.html">Painel</a>
+    </nav>
+  </div>
+  <div class="hero" style="padding-bottom: 70px;">
+    <h1 style="font-size: 2rem;">Publicar uma vaga</h1>
+    <p class="subtitulo">Gratuito para comércios, associações, produtores e moradores. Preencha os dados abaixo.</p>
+  </div>
+</header>
+
+<main>
+  <div class="cartao-formulario">
+    <div id="alerta-sucesso" class="alerta sucesso">Vaga publicada com sucesso! Ela já está visível no portal.</div>
+    <div id="alerta-erro" class="alerta erro">Não foi possível publicar a vaga. Confira os campos e tente novamente.</div>
+
+    <form id="form-vaga" novalidate>
+      <div class="grupo-campo">
+        <label for="titulo">Título da vaga *</label>
+        <input type="text" id="titulo" name="titulo" required placeholder="Ex.: Pedreiro, Vendedor(a), Diarista...">
+      </div>
+
+      <div class="grupo-campo">
+        <label for="empresa">Empresa, associação ou nome do contratante *</label>
+        <input type="text" id="empresa" name="empresa" required placeholder="Ex.: Mercadinho Bom Preço">
+      </div>
+
+      <div class="grupo-campo">
+        <label for="descricao">Descrição da vaga *</label>
+        <textarea id="descricao" name="descricao" rows="4" required placeholder="Descreva as atividades e requisitos"></textarea>
+      </div>
+
+      <div class="linha-campos">
+        <div class="grupo-campo">
+          <label for="categoria">Categoria *</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecione</option>
+            <option>Construção Civil</option>
+            <option>Serviços Gerais</option>
+            <option>Comércio</option>
+            <option>Agricultura</option>
+            <option>Artesanato e Costura</option>
+            <option>Educação</option>
+            <option>Saúde e Cuidados</option>
+            <option>Transporte</option>
+            <option>Outros</option>
+          </select>
+        </div>
+        <div class="grupo-campo">
+          <label for="tipoContrato">Tipo de contrato *</label>
+          <select id="tipoContrato" name="tipoContrato" required>
+            <option value="">Selecione</option>
+            <option>CLT</option>
+            <option>Temporário</option>
+            <option>Diarista</option>
+            <option>Autônomo</option>
+            <option>Meio período</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="linha-campos">
+        <div class="grupo-campo">
+          <label for="localizacao">Localização (bairro/zona) *</label>
+          <input type="text" id="localizacao" name="localizacao" required placeholder="Ex.: Centro, Alto Bonito, Zona Rural...">
+        </div>
+        <div class="grupo-campo">
+          <label for="salario">Remuneração</label>
+          <input type="text" id="salario" name="salario" placeholder="Ex.: R$ 80 por dia, A combinar...">
+        </div>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="contato">Telefone ou WhatsApp para contato *</label>
+        <input type="text" id="contato" name="contato" required placeholder="(75) 9 9999-0000">
+        <p class="dica">Os candidatos vão usar esse número para falar diretamente com você.</p>
+      </div>
+
+      <button type="submit" class="botao botao-primario botao-largo">Publicar vaga</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>Portal de Vagas de Monte Santo — conectando comércios, associações e moradores a oportunidades de trabalho locais.</p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/publicar.js"></script>
+</body>
+</html>
